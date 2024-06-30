@@ -11,7 +11,7 @@ mkdir -pm 0700 \
 dotfiles="${XDG_DATA_HOME:-"$HOME/.local/share"}/dotfiles"
 
 mkdir -pm 0700 "$dotfiles" \
-    && git clone --bare https://git.sr.ht/~ersen/dotfiles "$dotfiles" \
+    && git clone --bare "https://github.com/oersen/dotfiles.git" "$dotfiles" \
     && git --git-dir="$dotfiles" --work-tree="$HOME" checkout -f master
 
 case "$SHELL" in
@@ -43,7 +43,6 @@ sudo dnf install \
 pretty_print "install necessary packages"
 sudo dnf install \
     @c-development \
-    @fonts \
     @libreoffice \
     @networkmanager-submodules \
     @printing \
@@ -64,6 +63,7 @@ sudo dnf install \
     cmatrix \
     cowsay \
     dbus-tools \
+    default-fonts \
     dnscrypt-proxy \
     espeak-ng \
     ethtool \
@@ -78,13 +78,6 @@ sudo dnf install \
     git \
     gnome-themes-extra \
     grimshot \
-    gstreamer1-libav \
-    gstreamer1-plugins-bad-free \
-    gstreamer1-plugins-bad-freeworld \
-    gstreamer1-plugins-good \
-    gstreamer1-plugins-good-extras \
-    gstreamer1-plugins-ugly \
-    gstreamer1-plugins-ugly-free \
     gvfs-mtp \
     gvfs-smb \
     highlight \
@@ -95,6 +88,7 @@ sudo dnf install \
     isync \
     iwlwifi-dvm-firmware \
     jq \
+    libsixel-utils \
     libva-intel-driver \
     libva-utils \
     lolcat \
@@ -115,7 +109,8 @@ sudo dnf install \
     ncdu \
     ncmpcpp \
     network-manager-applet \
-    NetworkManager-openvpn \
+    NetworkManager-openconnect-gnome \
+    NetworkManager-openvpn-gnome \
     NetworkManager-tui \
     newsboat \
     nicotine+ \
@@ -123,7 +118,7 @@ sudo dnf install \
     notmuch-mutt \
     nyancat \
     pandoc \
-    papirus-icon-theme \
+    papirus-icon-theme-dark \
     parallel \
     pass \
     pavucontrol \
