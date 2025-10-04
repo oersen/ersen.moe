@@ -152,7 +152,6 @@ sudo dnf install \
     swaylock \
     symlinks \
     tcpdump \
-    thunderbird \
     tmux \
     torbrowser-launcher \
     translate-shell \
